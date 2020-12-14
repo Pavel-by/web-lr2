@@ -1,0 +1,23 @@
+{
+  "name": "lr2",
+  "version": "1.0.0",
+  "description": "Just simple app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pavel Mironchik",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "passport": "^0.4.1",
+    "passport-custom": "^1.1.1",
+    "passport-local": "^1.0.0",
+    "pug": "^3.0.0",
+    "require": "^2.4.20"
+  }
+}

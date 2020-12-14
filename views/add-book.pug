@@ -1,0 +1,30 @@
+html
+    head
+        style
+            include /public/styles/w3.css
+            include  /public/styles/main.css
+
+        script
+            include /public/js/books.js
+            include /public/js/add-books.js
+    body
+        include menu
+        include login
+
+        div.w3-panel
+            h1 Добавить книгу
+
+            form(name="addBook")
+                label Название
+                    input.w3-input.w3-border.w3-round(name="title")
+
+                label Автор
+                    input.w3-input.w3-border.w3-round(name="author")
+
+                label Дата выпуска
+                    input.w3-input.w3-border.w3-round(name="releaseDate")
+
+                label Количество книг
+                    input.w3-input.w3-border.w3-round(name="availableCount" type="number")
+
+                input.w3-button.w3-black.w3-margin-top(type="submit" value="Добавить")

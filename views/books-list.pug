@@ -1,0 +1,27 @@
+html
+    head
+        style
+            include /public/styles/main.css
+        style
+            include /public/styles/w3.css
+
+        script
+            include /public/js/books-list.js
+
+        script
+            !=`books = JSON.parse('${JSON.stringify(books)}');`
+
+    body
+        include menu
+        include login
+
+        div.w3-panel#books-filters
+            p
+                label
+                    input.w3-check.w3-margin-right#books-filter-only-available(
+                        type="checkbox"
+                        onchange="filterBooks()")
+                    ="Только в наличии"
+
+        div.w3-panel#books-place
+

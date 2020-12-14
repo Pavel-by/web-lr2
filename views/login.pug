@@ -1,0 +1,47 @@
+div.w3-modal#login-modal
+    div.w3-modal-content.w3-padding-large
+        h2
+            span#login-login-header(onclick="showLogin();", style="cursor: pointer;") Вход
+            span &nbsp;|&nbsp;
+            span#login-register-header(onclick="showRegister();", style="cursor: pointer;") Регистрация
+        hr
+        form(name="loginForm")
+            label(for="login-email") Email
+            input.w3-input.w3-border.w3-round(type="text" id="login-email" name="email")
+
+            div.w3-margin-top
+                p#login-error.w3-text-red
+
+            div.w3-margin-top
+                input.w3-button.w3-black.w3-text-white.w3-margin-right(type="submit" value="Войти")
+                input.w3-button.w3-black.w3-text-white(
+                type="button"
+                value="Отмена"
+                onclick="hideLogin(); return false;"
+                )
+
+        form(name="registerForm")
+            label(for="register-name") Имя
+            input.w3-input.w3-border.w3-round(type="text" id="register-name" name="name")
+
+            div.w3-margin-top
+                label(for="register-email") Email
+                input.w3-input.w3-border.w3-round(type="text" id="register-email" name="email")
+
+            div.w3-margin-top
+                label(for="register-age") Возраст
+                input.w3-input.w3-border.w3-round(type="number" id="register-age" name="age")
+
+            div.w3-margin-top
+                p#register-error.w3-text-red
+
+            div.w3-margin-top
+                input.w3-button.w3-black.w3-text-white.w3-margin-right(type="submit" value="Зарегистрироваться")
+                input.w3-button.w3-black.w3-text-white(
+                type="button"
+                value="Отмена"
+                onclick="hideLogin(); return false;"
+                )
+
+script(type="text/javascript")
+    include /public/js/login.js
